@@ -3,8 +3,13 @@ name: CI/CD
 
 on:
   push:
+    branches:
+      - master
   pull_request:
   workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   tests:
@@ -36,7 +41,6 @@ jobs:
           python -m pytest --cov=src --cov-report=term-missing
 
       - name: Generar documentación con pdoc
-        if: success()
         run: |
           python -m pdoc -o site \
             src/corporate_data.py \
@@ -47,10 +51,30 @@ jobs:
             src/singletonclient.py \
             src/singletonproxyobserver.py
 
-      - name: Publicar documentación como artefacto
-        if: success()
+      - name: Guardar documentación descargable
         uses: actions/upload-artifact@v4
         with:
           name: documentacion-pdoc
           path: site/
           if-no-files-found: error
+
+      - name: Preparar artefacto para GitHub Pages
+        uses: actions/upload-pages-artifact@v4
+        with:
+          path: site/
+
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/master'
+    needs: tests
+    runs-on: ubuntu-latest
+    permissions:
+      pages: write
+      id-token: write
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+
+    steps:
+      - name: Publicar en GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4

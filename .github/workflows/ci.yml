@@ -1,4 +1,5 @@
-﻿name: CI
+﻿
+name: CI/CD
 
 on:
   push:
@@ -33,3 +34,23 @@ jobs:
       - name: Ejecutar pruebas y cobertura
         run: |
           python -m pytest --cov=src --cov-report=term-missing
+
+      - name: Generar documentación con pdoc
+        if: success()
+        run: |
+          python -m pdoc -o site \
+            src/corporate_data.py \
+            src/corporate_log.py \
+            src/corporate_observer.py \
+            src/corporate_proxy.py \
+            src/observerclient.py \
+            src/singletonclient.py \
+            src/singletonproxyobserver.py
+
+      - name: Publicar documentación como artefacto
+        if: success()
+        uses: actions/upload-artifact@v4
+        with:
+          name: documentacion-pdoc
+          path: site/
+          if-no-files-found: error

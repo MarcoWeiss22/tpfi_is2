@@ -23,3 +23,6 @@ htmlcov/
 # Sistema operativo
 .DS_Store
 Thumbs.db
+
+# Documentación generada por pdoc
+site/

@@ -1,0 +1,25 @@
+﻿# Entorno virtual
+EntornoVirtual/
+.venv/
+venv/
+
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+dist/
+build/
+
+# Cachés y herramientas
+.mypy_cache/
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Editores
+.vscode/
+
+# Sistema operativo
+.DS_Store
+Thumbs.db

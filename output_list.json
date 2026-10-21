@@ -1,0 +1,108 @@
+[
+    {
+        "id": "999",
+        "nota": "Prueba TPFI"
+    },
+    {
+        "CUIT": "30-70925411-8",
+        "domicilio": "25 de Mayo 385",
+        "id": "UADER-FCYT-IS2",
+        "idReq": "226",
+        "idSeq": "333",
+        "item": "Item",
+        "localidad": "ConcepciÃ³n del Uruguay",
+        "provincia": "Entre RÃ­os",
+        "sede": "FCyT",
+        "seqID": "22",
+        "telefono": "03442 33-0044",
+        "web": "http://www.fcyt.uader.edu.ar/nuevo"
+    },
+    {
+        "seqID": "999",
+        "provincia": "Entre Ríos",
+        "idSeq": "999",
+        "idReq": "999",
+        "item": "Mi Item",
+        "cp": "3260",
+        "web": "https://miregistro.com.ar",
+        "CUIT": "30-12345678-9",
+        "localidad": "Concepción del Uruguay",
+        "sede": "FCyT",
+        "telefono": "03442 99-9999",
+        "domicilio": "Av. Mi Registro 123",
+        "id": "UADER-FCYT-IS2-MIREGISTRO"
+    },
+    {
+        "seqID": "",
+        "web": "",
+        "CUIT": "",
+        "localidad": "",
+        "provincia": "",
+        "sede": "FCyT",
+        "idSeq": "",
+        "telefono": "03442 55-5555",
+        "idReq": "",
+        "domicilio": "",
+        "id": "GAEL-DEMO-01",
+        "cp": ""
+    },
+    {
+        "telefono": "3442 556988",
+        "id": "lucas",
+        "localidad": "Gualeguaychu, Entre Ríos",
+        "sede": "FCYT"
+    },
+    {
+        "localidad": "Concepcion del Uruguay",
+        "id": "PRUEBA-01",
+        "telefono": "111"
+    },
+    {
+        "id": "TEST-02",
+        "localidad": "caseros",
+        "telefono": "3442 094011"
+    },
+    {
+        "seqID": "",
+        "web": "",
+        "CUIT": "",
+        "localidad": "Concepcion del Uruguay",
+        "provincia": "",
+        "sede": "FCyT",
+        "idSeq": "",
+        "idReq": "",
+        "telefono": "03442 22-2222",
+        "domicilio": "",
+        "id": "GAEL-TEST-01",
+        "cp": ""
+    },
+    {
+        "id": "UADER-FCyT-IS2",
+        "idreq": "224"
+    },
+    {
+        "seqID": "999",
+        "provincia": "Entre Ríos",
+        "idSeq": "999",
+        "idReq": "999",
+        "item": "Mi Item",
+        "cp": "3260",
+        "web": "https://miregistro.com.ar",
+        "CUIT": "30-12345678-9",
+        "localidad": "Concepción del Uruguay",
+        "sede": "FCyT",
+        "telefono": "03442 99-9999",
+        "domicilio": "Av. Mi Registro 123",
+        "id": "MIREGISTRO-UADER-FCYT-IS2"
+    },
+    {
+        "localidad": "Gualeguay",
+        "id": "HOla",
+        "telefono": "3442 094011"
+    },
+    {
+        "id": "registro_test",
+        "nombre": "Empresa Demo",
+        "telefono": "111222333"
+    }
+]
